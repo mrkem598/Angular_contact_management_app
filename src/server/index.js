@@ -13,7 +13,7 @@ app.use('/profiles', express.static(path.join(__dirname, 'profiles')));
 app.use(bodyParser.json());
 
 app.get('/api/contacts', (req, res) => {
-
+ 
   const contactsCollection = database.collection('contacts');
 
   contactsCollection.find({}).toArray((err, docs) => {
