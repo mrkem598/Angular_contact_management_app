@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       password: values.password
     };
 
+//
     this.api.post('authenticate', payload)
       .subscribe(data => {
         this.auth.setToken(data.token);
