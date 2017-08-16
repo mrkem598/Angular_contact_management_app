@@ -9,7 +9,7 @@ import { AuthService } from './auth.service';
 
 @Injectable()
 export class ApiService {
-  
+
 
   private baseUrl = environment.apiUrl;
 
@@ -30,6 +30,7 @@ export class ApiService {
   delete(url: string) {
     return this.request(url, RequestMethod.Delete);
   }
+
 
   request(url: string, method: RequestMethod, body?: Object) {
     const headers = new Headers();
