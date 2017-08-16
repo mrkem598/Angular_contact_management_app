@@ -8,7 +8,7 @@ function createExpressApp(database) {
 
 //use the static midleware in the body parser midle ware
   app.use(express.static(path.join(_dirname, 'public')));
-  app.use('/profiles', express.static(path.join(_dirname)));
+  app.use('/profiles', express.static(path.join(_dirname, 'profiles')));
   app.use(bodyParser.json());
   // Tell the expres to use the api router which taken the database connection
   app.use('/api', apiRouter(database));
