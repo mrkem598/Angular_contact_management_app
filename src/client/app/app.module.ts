@@ -13,6 +13,7 @@ import { ApiService } from './shared/api.service';
 import { AuthService } from './shared/auth.service';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { AuthGuard } from './auth.guard';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ApiService, AuthService],
+  providers: [ApiService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
